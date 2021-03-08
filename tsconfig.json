@@ -1,11 +1,28 @@
 {
 	"compilerOptions": {
+		"target": "esnext",
+		"module": "commonjs",
+		"lib": ["es2019", "dom"],
 		"outDir": "./dist/",
-		"noImplicitAny": true,
-		"target": "es5",
-		"lib": ["es5", "es6", "dom"],
 		"jsx": "react",
-		"allowJs": false,
-		"moduleResolution": "node"
-	}
+		"moduleResolution": "node",
+		"rootDirs": ["src"],
+		"baseUrl": "src",
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"paths": {
+			"utils": ["utils"],
+			"hoooks": ["hoooks"],
+			"types": ["types"]
+		},
+	},
+	"files": ["./src/index.tsx", "global.d.ts"],
+	"include": ["src", "jest"],
+	"exclude": ["node_modules", ".test."]
 }

@@ -1,9 +1,9 @@
 import { Configuration } from "webpack";
-import { merge } from 'webpack-merge';
+import * as webpackMerge  from 'webpack-merge';
 
 import { common } from './webpack.common';
 
-const config: Configuration = merge(common, {
+const config: Configuration = webpackMerge.merge(common, {
   mode: "production",
   devtool: 'cheap-module-source-map',
 });
